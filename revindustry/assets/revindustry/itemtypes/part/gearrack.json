@@ -1,0 +1,69 @@
+{
+	"code": "gearrack",
+	"variantgroups": [
+		{
+			"code": "metal",
+			"states": [
+				"iron"
+			]
+		}
+	],
+	"shape": {
+		"base": "item/wire-drawing",
+		"selectiveElements": [
+			"metal/rack/*"
+		]
+	},
+	"textures": {
+		"iron": {
+			"base": "game:block/metal/anvil/{metal}"
+		}
+	},
+	"creativeinventory": {
+		"general": [
+			"*"
+		],
+		"items": [
+			"*"
+		]
+	},
+	"maxstacksize": 8,
+	"materialDensity": 7870,
+	"attributes": {
+		"shelvable": true
+	},
+	"guiTransform": {
+		"rotation": {
+			"x": -30,
+			"y": -45,
+			"z": 0
+		},
+		"origin": {
+			"x": 1.28,
+			"y": 0.74,
+			"z": 0.47
+		},
+		"scale": 2.5
+	},
+	"groundTransform": {
+		"origin": {
+			"x": 1.28,
+			"y": 0.74,
+			"z": 0.47
+		},
+		"scale": 3
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -0.7,
+			"y": 0.1,
+			"z": -0.5
+		},
+		"origin": {
+			"x": 1.28,
+			"y": 0.74,
+			"z": 0.47
+		},
+		"scale": 0.8
+	}
+}

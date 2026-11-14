@@ -104,7 +104,8 @@
 						0.0,
 						4.0,
 						4.0
-					]
+					],
+					"enabled": false
 				},
 				"down": {
 					"texture": "#null",
@@ -113,7 +114,8 @@
 						0.0,
 						4.0,
 						4.0
-					]
+					],
+					"enabled": false
 				}
 			},
 			"children": [

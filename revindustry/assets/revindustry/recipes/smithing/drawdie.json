@@ -1,0 +1,27 @@
+{
+	"ingredient": {
+		"type": "item",
+		"code": "game:ingot-*",
+		"name": "metal",
+		"allowedVariants": [
+			"iron"
+		]
+	},
+	"pattern": [
+		[
+			"#####",
+			"##_##",
+			"#####"
+		],
+		[
+			"#####",
+			"##_##",
+			"#####"
+		]
+	],
+	"name": "drawdie",
+	"output": {
+		"type": "item",
+		"code": "revindustry:drawdie-{metal}"
+	}
+}
