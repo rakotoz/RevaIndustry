@@ -1,5 +1,6 @@
 {
 	"item-wire-copper": "Copper wire",
 	"itemdesc-wire-*": "A coil of drawn wire. Needed for dynamos, motors and power lines.",
-	"block-wiredrawing": "Wire-drawing bench"
+	"block-wiredrawing-*": "Wire-drawing bench",
+	"blockdesc-wiredrawing-*": "Equipment for cold metal forming, designed for reducing cross-sectional area and manufacturing wire"
 }
