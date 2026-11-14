@@ -1,0 +1,14 @@
+{
+    "$schema": "https://moddbcdn.vintagestory.at/schema/modinfo.latest.json",
+    "type": "Code",
+    "modid": "revindustry",
+    "name": "Rev Industry",
+    "authors": [
+        "Revan"
+    ],
+    "description": "Industrial progression from water and wind to the atom: energy, metallurgy, farming, food and logistics.",
+    "version": "0.0.1",
+    "dependencies": {
+        "game": "1.22.0"
+    }
+}
