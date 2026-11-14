@@ -1,0 +1,16 @@
+[
+	{
+		"code": "copperwire",
+		"ingredient": {
+			"type": "item",
+			"code": "game:rod-copper",
+			"quantity": 1
+		},
+		"output": {
+			"type": "item",
+			"code": "revindustry:wire-copper",
+			"stackSize": 1
+		},
+		"drawTime": 5
+	}
+]
