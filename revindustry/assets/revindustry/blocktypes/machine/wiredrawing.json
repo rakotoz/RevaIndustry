@@ -1,4 +1,6 @@
 {
+	"class": "RevWireDrawing",
+	"entityClass": "RevWireDrawing",
 	"code": "wiredrawing",
 	"behaviors": [
 		{
