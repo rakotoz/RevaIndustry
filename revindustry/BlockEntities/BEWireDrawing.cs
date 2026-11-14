@@ -21,12 +21,14 @@ public class BEWireDrawing : BlockEntityOpenableContainer {
     private float _drawTime;
     private string? _progressRecipe;
     private long _lastCrankMs;
+    private Shape? _shape;
 
     public override InventoryBase Inventory => _inventory;
     public override string InventoryClassName => "revwiredrawing";
     private ItemSlot InputSlot => _inventory[0];
     private ItemSlot OutputSlot => _inventory[1];
     private BlockEntityAnimationUtil? AnimUtil => GetBehavior<BEBehaviorAnimatable>()?.animUtil;
+    public bool IsBuilt => GetBehavior<BEBehaviorRightClickConstructable>()?.IsComplete ?? true;
 
     public BEWireDrawing() {
         _inventory = new InventoryGeneric(2, null, null,
@@ -40,9 +42,9 @@ public class BEWireDrawing : BlockEntityOpenableContainer {
             RegisterGameTickListener(OnServerTick, 100);
         }
         if (api is ICoreClientAPI capi) {
-            Shape shape = Shape.TryGet(api, Block.Shape.Base.CopyWithPathPrefixAndAppendixOnce("shapes/", ".json"));
-            AnimUtil?.InitializeAnimator("revwiredrawing", shape, capi.Tesselator.GetTextureSource(Block),
-                new Vec3f(0, Block.Shape.rotateY, 0));
+            _shape = Shape.TryGet(api, Block.Shape.Base.CopyWithPathPrefixAndAppendixOnce("shapes/", ".json"));
+            AnimUtil?.InitializeAnimator("revwiredrawing-" + Block.Code.ToShortString(), _shape,
+                capi.Tesselator.GetTextureSource(Block), new Vec3f(0, Block.Shape.rotateY, 0));
             UpdateAnimation(_drawProgress);
         }
     }
@@ -61,6 +63,9 @@ public class BEWireDrawing : BlockEntityOpenableContainer {
     }
 
     private void OnServerTick(float dt) {
+        if (!IsBuilt) {
+            return;
+        }
         bool cranking = Api.World.ElapsedMilliseconds - _lastCrankMs < CrankTimeoutMs;
         WireDrawingRecipe? recipe = _recipes?.FindFor(InputSlot.Itemstack);
         bool drawing = cranking && recipe != null && HasRoomFor(recipe);
@@ -195,10 +200,28 @@ public class BEWireDrawing : BlockEntityOpenableContainer {
         if (AnimUtil?.activeAnimationsByAnimCode.Count > 0) {
             return true;
         }
-        return base.OnTesselation(mesher, tessThreadTesselator);
+
+        CompositeShape? stageShape = GetBehavior<BEBehaviorRightClickConstructable>()?.shape;
+        if (stageShape == null) {
+            return base.OnTesselation(mesher, tessThreadTesselator);
+        }
+
+        _shape ??= Shape.TryGet(Api, stageShape.Base.CopyWithPathPrefixAndAppendixOnce("shapes/", ".json"));
+        if (_shape == null) {
+            return false;
+        }
+
+        tessThreadTesselator.TesselateShape(Block, _shape, out MeshData mesh,
+            new Vec3f(0, stageShape.rotateY, 0), null, stageShape.SelectiveElements);
+        mesher.AddMeshData(mesh);
+        return true;
     }
 
     public override void GetBlockInfo(IPlayer forPlayer, StringBuilder dsc) {
+        if (!IsBuilt) {
+            GetBehavior<BEBehaviorRightClickConstructable>()?.GetBlockInfo(forPlayer, dsc);
+            return;
+        }
         if (_drawProgress > 0 && _drawTime > 0) {
             dsc.AppendLine(Lang.Get("revindustry:wiredrawing-progress", (int)(_drawProgress / _drawTime * 100)));
         }

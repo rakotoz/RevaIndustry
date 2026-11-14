@@ -1,8 +1,14 @@
 {
 	"item-wire-copper": "Copper wire",
 	"itemdesc-wire-*": "A coil of drawn wire. Needed for dynamos, motors and power lines.",
-	"block-wiredrawing-*": "Wire-drawing bench",
-	"blockdesc-wiredrawing-*": "Equipment for cold metal forming, designed for reducing cross-sectional area and manufacturing wire",
+	"block-wiredrawing-*": "Wire-drawing bench frame",
+	"blockdesc-wiredrawing-*": "A bench for drawing metal rods into wire. Place it as a wooden frame and finish it with right clicks: 4 iron rods, a gear rack, a draw die, 2 iron plates and a wire-drawing pinion. On the finished bench, put a rod into the input slot and hold right click on the crank: the carriage pulls it through the die.",
 	"wiredrawing-title": "Wire-drawing bench",
-	"wiredrawing-progress": "Drawing: {0}%"
+	"wiredrawing-progress": "Drawing: {0}%",
+	"item-drawdie-*": "Draw die",
+	"itemdesc-drawdie-*": "A plate with a sized hole that wire is pulled through. Part of the wire-drawing bench.",
+	"item-gearrack-*": "Gear rack",
+	"itemdesc-gearrack-*": "A toothed bar that the carriage pinion rolls along. Part of the wire-drawing bench.",
+	"item-pinion-*": "Wire-drawing pinion",
+	"itemdesc-pinion-*": "A gear on the crank axle: it rolls along the gear rack and pulls the carriage. Part of the wire-drawing bench."
 }

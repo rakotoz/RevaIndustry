@@ -1,0 +1,14 @@
+{
+	"ingredient": { "type": "item", "code": "game:ingot-*", "name": "metal", "allowedVariants": ["iron"] },
+	"pattern": [[
+		"_#_#_#_",
+		"#######",
+		"_##_##_",
+		"###_###",
+		"_##_##_",
+		"#######",
+		"_#_#_#_"
+	]],
+	"name": "pinion",
+	"output": { "type": "item", "code": "revindustry:pinion-{metal}" }
+}

@@ -1,0 +1,23 @@
+[
+	{
+		"ingredientPattern": "PPP,S_S,S_S",
+		"ingredients": {
+			"P": {
+				"type": "item",
+				"code": "game:plank-*",
+				"quantity": 1
+			},
+			"S": {
+				"type": "item",
+				"code": "game:stick",
+				"quantity": 1
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "revindustry:wiredrawing-north"
+		}
+	}
+]
