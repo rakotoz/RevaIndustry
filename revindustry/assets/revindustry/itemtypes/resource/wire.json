@@ -1,0 +1,83 @@
+{
+	"code": "wire",
+	"variantgroups": [
+		{
+			"code": "metal",
+			"states": [
+				"copper"
+			]
+		}
+	],
+	"shape": {
+		"base": "item/wire"
+	},
+	"textures": {
+		"metal": {
+			"base": "game:block/metal/anvil/{metal}"
+		}
+	},
+	"creativeinventory": {
+		"general": [
+			"*"
+		],
+		"items": [
+			"*"
+		]
+	},
+	"maxstacksize": 32,
+	"materialDensityByType": {
+		"*-copper": 8960
+	},
+	"combustiblePropsByType": {
+		"wire-copper": {
+			"meltingPoint": 1084,
+			"meltingDuration": 20,
+			"smeltedRatio": 2,
+			"smeltedStack": {
+				"type": "item",
+				"code": "game:ingot-copper"
+			}
+		}
+	},
+	"guiTransform": {
+		"rotation": {
+			"x": -45,
+			"y": -45,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.2,
+			"z": 0.5
+		},
+		"scale": 1.81
+	},
+	"groundTransform": {
+		"origin": {
+			"x": 0.2,
+			"y": 0,
+			"z": 0.9
+		},
+		"scale": 1.7,
+		"rotation": { "x": 0, "y": 0, "z": 0 }
+	},
+	"tpHandTransform": {
+		"translation": { "x": -0.7, "y": 0.1, "z": -0.5 },
+		"rotation": { "x": 0, "y": 0, "z": 0 },
+		"origin": { "x": 0.35, "y": -0.4, "z": 0.35 },
+		"scale": 0.51
+	},
+	"tpOffHandTransform": {
+		"translation": { "x": -0.7, "y": 0.1, "z": -0.5 },
+		"rotation": { "x": 0, "y": 0, "z": 0 },
+		"origin": { "x": 0.35, "y": -0.4, "z": 0.35 },
+		"scale": 0.51
+	},
+	"attributes": {
+		"shelvable": true,
+		"onshelfTransform": {
+			"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+			"scale": 0.35
+		}
+	}
+}

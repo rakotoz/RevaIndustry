@@ -1,0 +1,28 @@
+[
+	{
+		"ingredientPattern": "HI,_P",
+		"ingredients": {
+			"I": {
+				"type": "item",
+				"code": "game:ingot-copper"
+			},
+			"P": {
+				"type": "item",
+				"code": "game:plank-*"
+			},
+			"H": {
+				"type": "item",
+				"tags": ["tool-hammer"],
+				"isTool": true,
+				"toolDurabilityCost": 2
+			}
+		},
+		"width": 2,
+		"height": 2,
+		"output": {
+			"type": "item",
+			"code": "wire-copper",
+			"quantity": 2
+		}
+	}
+]
