@@ -1,0 +1,53 @@
+{
+	"code": "rollingmill",
+	"variantgroups": [
+		{ "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
+	],
+	"behaviors": [
+		{ "name": "HorizontalOrientable" }
+	],
+	"shapeByType": {
+		"*-north": { "base": "item/rolling-mill", "rotateY": 0 },
+		"*-east": { "base": "item/rolling-mill", "rotateY": 270 },
+		"*-south": { "base": "item/rolling-mill", "rotateY": 180 },
+		"*-west": { "base": "item/rolling-mill", "rotateY": 90 }
+	},
+	"textures": {
+		"iron": { "base": "game:block/metal/anvil/iron" },
+		"steel": { "base": "game:block/metal/anvil/steel" },
+		"tinbronze": { "base": "game:block/metal/anvil/tinbronze" },
+		"oak": { "base": "game:block/wood/oak" },
+		"oak-dark": { "base": "game:block/wood/oak-dark" }
+	},
+	"creativeinventory": { "general": ["rollingmill-north"] },
+	"drops": [
+		{ "type": "block", "code": "rollingmill-north" }
+	],
+	"blockmaterial": "Metal",
+	"resistance": 4,
+	"materialDensity": 7000,
+	"lightAbsorption": 0,
+	"sideAo": { "all": false },
+	"sidesolid": { "all": false },
+	"sideopaque": { "all": false },
+	"selectionBoxes": [
+		{
+			"x1": 0.25, "y1": 0, "z1": 0.125, "x2": 0.81, "y2": 1.0, "z2": 0.875,
+			"rotateYByType": { "*-east": 270, "*-south": 180, "*-west": 90 }
+		},
+		{
+			"x1": 0, "y1": 0.25, "z1": 0.25, "x2": 0.25, "y2": 0.82, "z2": 0.82,
+			"rotateYByType": { "*-east": 270, "*-south": 180, "*-west": 90 }
+		}
+	],
+	"collisionBox": {
+		"x1": 0.19, "y1": 0, "z1": 0.125, "x2": 0.81, "y2": 0.9, "z2": 0.875,
+		"rotateYByType": { "*-east": 270, "*-south": 180, "*-west": 90 }
+	},
+	"sounds": {
+		"place": "game:block/anvil",
+		"break": "game:block/anvil",
+		"hit": "game:block/anvil",
+		"walk": "game:walk/stone"
+	}
+}

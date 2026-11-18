@@ -1,4 +1,5 @@
 {
+	"code": "revindustry-drawdie",
 	"ingredient": {
 		"type": "item",
 		"code": "game:ingot-*",

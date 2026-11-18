@@ -10,5 +10,7 @@
 	"item-gearrack-*": "Gear rack",
 	"itemdesc-gearrack-*": "A toothed bar that the carriage pinion rolls along. Part of the wire-drawing bench.",
 	"item-pinion-*": "Wire-drawing pinion",
-	"itemdesc-pinion-*": "A gear on the crank axle: it rolls along the gear rack and pulls the carriage. Part of the wire-drawing bench."
+	"itemdesc-pinion-*": "A gear on the crank axle: it rolls along the gear rack and pulls the carriage. Part of the wire-drawing bench.",
+	"block-rollingmill-*": "Rolling mill",
+	"blockdesc-rollingmill-*": "A hand-cranked mill with two steel rolls. The smooth part of the rolls flattens an ingot into a sheet, the grooves turn it into rods."
 }
