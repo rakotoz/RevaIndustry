@@ -1,5 +1,5 @@
 {
-	"class": "RevWireDrawing",
+	"class": "RevHandCrankedMachine",
 	"entityClass": "RevWireDrawing",
 	"code": "wiredrawing",
 	"guiTransform": {

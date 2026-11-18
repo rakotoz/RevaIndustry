@@ -1,0 +1,59 @@
+{
+	"code": "rolledsheet",
+	"variantgroups": [
+		{ "code": "metal", "states": ["copper", "tinbronze", "iron", "steel"] }
+	],
+	"shape": { "base": "item/rolled-sheet" },
+	"textures": {
+		"metal": { "base": "game:block/metal/sheet/{metal}1" }
+	},
+	"creativeinventory": { "general": ["*"], "items": ["*"] },
+	"maxstacksize": 16,
+	"attributes": { "shelvable": true },
+	"materialDensityByType": {
+		"*-copper": 8960,
+		"*-tinbronze": 7600,
+		"*-iron": 7870,
+		"*-steel": 7850
+	},
+	"combustiblePropsByType": {
+		"*-copper": {
+			"meltingPoint": 1084,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": { "type": "item", "code": "game:ingot-copper" }
+		},
+		"*-tinbronze": {
+			"meltingPoint": 950,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": { "type": "item", "code": "game:ingot-tinbronze" }
+		},
+		"*-iron": {
+			"meltingPoint": 1482,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": { "type": "item", "code": "game:ingot-iron" }
+		},
+		"*-steel": {
+			"meltingPoint": 1502,
+			"meltingDuration": 30,
+			"smeltedRatio": 1,
+			"smeltedStack": { "type": "item", "code": "game:ingot-steel" }
+		}
+	},
+	"guiTransform": {
+		"rotation": { "x": -30, "y": -44, "z": 0 },
+		"origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
+		"scale": 1.8
+	},
+	"groundTransform": {
+		"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+		"scale": 3
+	},
+	"tpHandTransform": {
+		"translation": { "x": -0.7, "y": 0.1, "z": -0.53 },
+		"origin": { "x": 0.5, "y": 0.1, "z": 0.5 },
+		"scale": 0.7
+	}
+}

@@ -7,7 +7,8 @@ public class IndustryModSystem : ModSystem {
     public override void Start(ICoreAPI api) {
         api.Logger.Notification("[revindustry] Mod loaded on: " + api.Side);
 
-        api.RegisterBlockClass("RevWireDrawing", typeof(BlockWireDrawing));
+        api.RegisterBlockClass("RevHandCrankedMachine", typeof(BlockHandCrankedMachine));
         api.RegisterBlockEntityClass("RevWireDrawing", typeof(BEWireDrawing));
+        api.RegisterBlockEntityClass("RevRollingMill", typeof(BERollingMill));
     }
 }

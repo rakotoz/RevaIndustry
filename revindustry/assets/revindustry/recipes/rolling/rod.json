@@ -1,0 +1,62 @@
+[
+	{
+		"code": "rod-copper",
+		"mode": "rod",
+		"ingredient": {
+			"type": "item",
+			"code": "game:ingot-copper",
+			"quantity": 1
+		},
+		"output": {
+			"type": "item",
+			"code": "game:rod-copper",
+			"stackSize": 2
+		},
+		"time": 4
+	},
+	{
+		"code": "rod-tinbronze",
+		"mode": "rod",
+		"ingredient": {
+			"type": "item",
+			"code": "game:ingot-tinbronze",
+			"quantity": 1
+		},
+		"output": {
+			"type": "item",
+			"code": "game:rod-tinbronze",
+			"stackSize": 2
+		},
+		"time": 4
+	},
+	{
+		"code": "rod-iron",
+		"mode": "rod",
+		"ingredient": {
+			"type": "item",
+			"code": "game:ingot-iron",
+			"quantity": 1
+		},
+		"output": {
+			"type": "item",
+			"code": "game:rod-iron",
+			"stackSize": 2
+		},
+		"time": 4
+	},
+	{
+		"code": "rod-steel",
+		"mode": "rod",
+		"ingredient": {
+			"type": "item",
+			"code": "game:ingot-steel",
+			"quantity": 1
+		},
+		"output": {
+			"type": "item",
+			"code": "game:rod-steel",
+			"stackSize": 2
+		},
+		"time": 4
+	}
+]

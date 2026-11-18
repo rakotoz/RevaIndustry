@@ -4,45 +4,49 @@ using Vintagestory.API.MathTools;
 
 namespace revindustry.Gui;
 
-public class GuiDialogWireDrawing : GuiDialogBlockEntity {
-    public GuiDialogWireDrawing(string title, InventoryBase inventory, BlockPos pos, ICoreClientAPI capi) : base(title,
-        inventory, pos, capi) {
+public class GuiDialogMachine : GuiDialogBlockEntity {
+    protected static readonly double[] ProgressColor = { 0.85, 0.55, 0.25, 1 };
+
+    public GuiDialogMachine(string title, InventoryBase inventory, BlockPos pos, ICoreClientAPI capi)
+        : base(title, inventory, pos, capi) {
         if (IsDuplicate) {
             return;
         }
-
         SetupDialog();
     }
 
-    private void SetupDialog() {
+    protected virtual void SetupDialog() {
         ElementBounds dialogBounds = ElementStdBounds.AutosizedMainDialog
             .WithAlignment(EnumDialogArea.RightMiddle)
             .WithFixedAlignmentOffset(-GuiStyle.DialogToScreenPadding, 0);
 
         ElementBounds inputBounds = ElementStdBounds.SlotGrid(EnumDialogArea.None, 0, 30, 1, 1);
-        ElementBounds outputBounds = ElementStdBounds.SlotGrid(EnumDialogArea.None, 120, 30, 1, 1);
-        ElementBounds progressBounds = ElementBounds.Fixed(60, 52, 54, 10);
+        ElementBounds outputBounds = ElementStdBounds.SlotGrid(EnumDialogArea.None, 176, 30, 1, 1);
+        ElementBounds progressBounds = ElementBounds.Fixed(64, 52, 100, 10);
 
         ElementBounds bgBounds = ElementBounds.Fill.WithFixedPadding(GuiStyle.ElementToDialogPadding);
         bgBounds.BothSizing = ElementSizing.FitToChildren;
         bgBounds.WithChildren(inputBounds, outputBounds, progressBounds);
 
-        SingleComposer = capi.Gui.CreateCompo("revwiredrawing-" + BlockEntityPosition, dialogBounds)
+        GuiComposer composer = capi.Gui.CreateCompo("revmachine-" + BlockEntityPosition, dialogBounds)
             .AddShadedDialogBG(bgBounds)
             .AddDialogTitleBar(DialogTitle, OnTitleBarClose)
             .BeginChildElements(bgBounds)
             .AddItemSlotGrid(Inventory, DoSendPacket, 1, new[] { 0 }, inputBounds, "inputSlot")
             .AddItemSlotGrid(Inventory, DoSendPacket, 1, new[] { 1 }, outputBounds, "outputSlot")
-            .AddStatbar(progressBounds, new double[] { 0.85, 0.55, 0.25, 1 }, "progress")
-            .EndChildElements()
-            .Compose();
+            .AddStatbar(progressBounds, ProgressColor, "progress");
+        ComposeExtras(composer, bgBounds);
+        SingleComposer = composer.EndChildElements().Compose();
     }
 
-    private void OnTitleBarClose() {
+    protected virtual void ComposeExtras(GuiComposer composer, ElementBounds bgBounds) {
+    }
+
+    protected void OnTitleBarClose() {
         TryClose();
     }
 
-    public void UpdateProgress(float progress, float drawTime) {
-        SingleComposer?.GetStatbar("progress")?.SetValues(progress, 0, drawTime > 0 ? drawTime : 1);
+    public void UpdateProgress(float progress, float workTime) {
+        SingleComposer?.GetStatbar("progress")?.SetValues(progress, 0, workTime > 0 ? workTime : 1);
     }
 }

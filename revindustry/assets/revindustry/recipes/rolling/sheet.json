@@ -1,0 +1,62 @@
+[
+	{
+		"code": "rolledsheet-copper",
+		"mode": "sheet",
+		"ingredient": {
+			"type": "item",
+			"code": "game:ingot-copper",
+			"quantity": 1
+		},
+		"output": {
+			"type": "item",
+			"code": "revindustry:rolledsheet-copper",
+			"stackSize": 1
+		},
+		"time": 6
+	},
+	{
+		"code": "rolledsheet-tinbronze",
+		"mode": "sheet",
+		"ingredient": {
+			"type": "item",
+			"code": "game:ingot-tinbronze",
+			"quantity": 1
+		},
+		"output": {
+			"type": "item",
+			"code": "revindustry:rolledsheet-tinbronze",
+			"stackSize": 1
+		},
+		"time": 6
+	},
+	{
+		"code": "rolledsheet-iron",
+		"mode": "sheet",
+		"ingredient": {
+			"type": "item",
+			"code": "game:ingot-iron",
+			"quantity": 1
+		},
+		"output": {
+			"type": "item",
+			"code": "revindustry:rolledsheet-iron",
+			"stackSize": 1
+		},
+		"time": 6
+	},
+	{
+		"code": "rolledsheet-steel",
+		"mode": "sheet",
+		"ingredient": {
+			"type": "item",
+			"code": "game:ingot-steel",
+			"quantity": 1
+		},
+		"output": {
+			"type": "item",
+			"code": "revindustry:rolledsheet-steel",
+			"stackSize": 1
+		},
+		"time": 6
+	}
+]

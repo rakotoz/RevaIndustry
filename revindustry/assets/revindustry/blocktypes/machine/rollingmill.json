@@ -1,4 +1,7 @@
 {
+	"class": "RevHandCrankedMachine",
+	"entityClass": "RevRollingMill",
+	"entityBehaviors": [{ "name": "Animatable" }],
 	"code": "rollingmill",
 	"variantgroups": [
 		{ "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
