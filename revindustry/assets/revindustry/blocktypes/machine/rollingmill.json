@@ -6,6 +6,13 @@
 			"name": "Animatable"
 		},
 		{
+			"name": "MPConsumer",
+			"properties": {
+				"resistance": 0.1,
+				"mechPartShape": null
+			}
+		},
+		{
 			"name": "RightClickConstructable",
 			"properties": {
 				"brokenDropsRatio": 0.8,
@@ -195,6 +202,7 @@
 		"walk": "game:walk/stone"
 	},
 	"attributes": {
+		"shaftFace": "west",
 		"handbook": {
 			"extraSections": [
 				{

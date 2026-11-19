@@ -27,7 +27,7 @@
 					"sizey": 1,
 					"sizez": 1,
 					"cposition": {
-						"x": 0,
+						"x": 1,
 						"y": 0,
 						"z": 0
 					}
@@ -39,7 +39,7 @@
 					"cposition": {
 						"x": 0,
 						"y": 0,
-						"z": 0
+						"z": 1
 					}
 				},
 				"*-south": {
@@ -47,7 +47,7 @@
 					"sizey": 1,
 					"sizez": 1,
 					"cposition": {
-						"x": 1,
+						"x": 0,
 						"y": 0,
 						"z": 0
 					}
@@ -59,7 +59,7 @@
 					"cposition": {
 						"x": 0,
 						"y": 0,
-						"z": 1
+						"z": 0
 					}
 				}
 			}
@@ -71,6 +71,13 @@
 	"entityBehaviors": [
 		{
 			"name": "Animatable"
+		},
+		{
+			"name": "MPConsumer",
+			"properties": {
+				"resistance": 0.1,
+				"mechPartShape": null
+			}
 		},
 		{
 			"name": "RightClickConstructable",
@@ -258,6 +265,8 @@
 		}
 	],
 	"attributes": {
+		"shaftFace": "east",
+		"shapeOffsetX": -16,
 		"handbook": {
 			"extraSections": [
 				{
