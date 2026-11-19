@@ -21,9 +21,14 @@ public class BERollingMill : BEHandCrankedMachine {
     protected override string TitleLangKey => "revindustry:rollingmill-title";
     protected override string ProgressLangKey => "revindustry:rollingmill-progress";
 
+    private RollingRecipeSystem RecipeSystem => _recipes ??= Api.ModLoader.GetModSystem<RollingRecipeSystem>();
+
     protected override MachineRecipe? FindRecipe(ItemStack? input) {
-        _recipes ??= Api.ModLoader.GetModSystem<RollingRecipeSystem>();
-        return _recipes.FindFor(input, Mode);
+        return RecipeSystem.FindFor(input, Mode);
+    }
+
+    protected override bool AcceptsInput(ItemStack? stack) {
+        return RecipeSystem.AcceptsInput(stack);
     }
 
     protected override GuiDialogMachine CreateDialog(ICoreClientAPI capi) {

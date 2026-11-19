@@ -1,5 +1,7 @@
+using System;
 using System.Text;
 using revindustry.Gui;
+using revindustry.Inventory;
 using revindustry.Recipes;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
@@ -7,12 +9,17 @@ using Vintagestory.API.Config;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
+using Vintagestory.GameContent.Mechanics;
 
 namespace revindustry.BlockEntities;
 
 public abstract class BEHandCrankedMachine : BlockEntityOpenableContainer {
     private const long CrankTimeoutMs = 300;
     private const float AnimationFps = 30f;
+    private const float MinRate = 0.01f;
+    private const float MaxShaftRate = 2f;
+    private const string CrankElement = "crank";
+    private const string CouplingElement = "coupling";
 
     private readonly InventoryGeneric _inventory;
     private bool _working;
@@ -20,13 +27,17 @@ public abstract class BEHandCrankedMachine : BlockEntityOpenableContainer {
     private float _workTime;
     private string? _progressRecipe;
     private long _lastCrankMs;
+    private float _rate = 1;
+    private bool _shaftAttached;
     private Shape? _shape;
 
     public override InventoryBase Inventory => _inventory;
     protected ItemSlot InputSlot => _inventory[0];
     protected ItemSlot OutputSlot => _inventory[1];
     private BlockEntityAnimationUtil? AnimUtil => GetBehavior<BEBehaviorAnimatable>()?.animUtil;
+    private BEBehaviorMPConsumer? Consumer => GetBehavior<BEBehaviorMPConsumer>();
     public bool IsBuilt => GetBehavior<BEBehaviorRightClickConstructable>()?.IsComplete ?? true;
+    public bool ShaftAttached => _shaftAttached;
     public string Title => Lang.Get(TitleLangKey);
 
     protected abstract string AnimationCode { get; }
@@ -34,24 +45,81 @@ public abstract class BEHandCrankedMachine : BlockEntityOpenableContainer {
     protected abstract string TitleLangKey { get; }
     protected abstract string ProgressLangKey { get; }
     protected abstract MachineRecipe? FindRecipe(ItemStack? input);
+    protected abstract bool AcceptsInput(ItemStack? stack);
 
     protected BEHandCrankedMachine() {
         _inventory = new InventoryGeneric(2, null, null,
-            (id, inv) => id == 1 ? new ItemSlotOutput(inv) : new ItemSlot(inv));
+            (id, inv) => id == 1 ? new ItemSlotOutput(inv) : new ItemSlotMachineInput(inv, CanAccept));
+    }
+
+    private bool CanAccept(ItemStack? stack) {
+        return Api != null && AcceptsInput(stack);
     }
 
     public override void Initialize(ICoreAPI api) {
         base.Initialize(api);
         if (api.Side == EnumAppSide.Server) {
+            _shaftAttached = CheckShaft();
             RegisterGameTickListener(OnServerTick, 100);
         }
 
-        if (api is ICoreClientAPI capi) {
-            _shape = Shape.TryGet(api, Block.Shape.Base.CopyWithPathPrefixAndAppendixOnce("shapes/", ".json"));
-            AnimUtil?.InitializeAnimator(InventoryClassName + "-" + Block.Code.ToShortString(), _shape,
-                capi.Tesselator.GetTextureSource(Block), new Vec3f(0, Block.Shape.rotateY, 0));
+        if (api.Side == EnumAppSide.Client) {
+            LoadShape();
             UpdateAnimation(_progress);
         }
+    }
+
+    private bool CheckShaft() {
+        return Block is BlockHandCrankedMachine machine && machine.IsShaftAttached(Api.World, Pos);
+    }
+
+    private void LoadShape() {
+        if (Api is not ICoreClientAPI capi) {
+            return;
+        }
+
+        _shape = ReadShape();
+        if (_shape == null) {
+            return;
+        }
+
+        AnimUtil?.InitializeAnimator(InventoryClassName + "-" + Block.Code.ToShortString()
+                                     + (_shaftAttached ? "-shaft" : "-crank"), _shape,
+            capi.Tesselator.GetTextureSource(Block), new Vec3f(0, Block.Shape.rotateY, 0));
+    }
+
+    private Shape? ReadShape() {
+        Shape? shape = Shape.TryGet(Api, Block.Shape.Base.CopyWithPathPrefixAndAppendixOnce("shapes/", ".json"));
+        if (shape == null) {
+            return null;
+        }
+
+        float offsetX = Block.Attributes?["shapeOffsetX"].AsFloat() ?? 0;
+        if (offsetX != 0) {
+            foreach (ShapeElement element in shape.Elements) {
+                element.From[0] += offsetX;
+                element.To[0] += offsetX;
+                if (element.RotationOrigin != null) {
+                    element.RotationOrigin[0] += offsetX;
+                }
+            }
+        }
+
+        Hide(shape, _shaftAttached ? CrankElement : CouplingElement);
+        return shape;
+    }
+
+    private static void Hide(Shape shape, string elementName) {
+        shape.GetElementByName(elementName)?.WalkRecursive(element => {
+            if (element.Faces != null) {
+                foreach (ShapeElementFace face in element.Faces.Values) {
+                    face.Enabled = false;
+                }
+            }
+            if (element.FacesResolved != null) {
+                Array.Clear(element.FacesResolved);
+            }
+        });
     }
 
     protected virtual GuiDialogMachine CreateDialog(ICoreClientAPI capi) {
@@ -71,13 +139,28 @@ public abstract class BEHandCrankedMachine : BlockEntityOpenableContainer {
     }
 
     private void OnServerTick(float dt) {
+        bool shaftAttached = CheckShaft();
+        if (shaftAttached != _shaftAttached) {
+            _shaftAttached = shaftAttached;
+            MarkDirty(true);
+        }
+
         if (!IsBuilt) {
             return;
         }
 
-        bool cranking = Api.World.ElapsedMilliseconds - _lastCrankMs < CrankTimeoutMs;
+        float rate;
+        if (_shaftAttached) {
+            rate = Math.Min(Consumer?.TrueSpeed ?? 0, MaxShaftRate);
+        } else {
+            rate = Api.World.ElapsedMilliseconds - _lastCrankMs < CrankTimeoutMs ? 1 : 0;
+        }
+
         MachineRecipe? recipe = FindRecipe(InputSlot.Itemstack);
-        bool working = cranking && recipe != null && HasRoomFor(recipe);
+        bool working = rate > MinRate && recipe != null && HasRoomFor(recipe);
+        if (working) {
+            _rate = rate;
+        }
 
         if (working != _working) {
             _working = working;
@@ -98,7 +181,7 @@ public abstract class BEHandCrankedMachine : BlockEntityOpenableContainer {
         }
 
         _workTime = recipe.Time;
-        _progress += dt;
+        _progress += dt * rate;
         if (_progress >= recipe.Time) {
             Produce(recipe);
             _progress = 0;
@@ -151,6 +234,8 @@ public abstract class BEHandCrankedMachine : BlockEntityOpenableContainer {
         tree.SetFloat("progress", _progress);
         tree.SetFloat("workTime", _workTime);
         tree.SetBool("working", _working);
+        tree.SetFloat("rate", _rate);
+        tree.SetBool("shaftAttached", _shaftAttached);
         if (_progressRecipe != null) {
             tree.SetString("progressRecipe", _progressRecipe);
         }
@@ -158,12 +243,19 @@ public abstract class BEHandCrankedMachine : BlockEntityOpenableContainer {
 
     public override void FromTreeAttributes(ITreeAttribute tree, IWorldAccessor worldForResolving) {
         float oldProgress = _progress;
+        bool oldShaftAttached = _shaftAttached;
 
         _working = tree.GetBool("working");
         base.FromTreeAttributes(tree, worldForResolving);
         _progress = tree.GetFloat("progress");
         _workTime = tree.GetFloat("workTime");
         _progressRecipe = tree.GetString("progressRecipe");
+        _rate = tree.GetFloat("rate", 1);
+        _shaftAttached = tree.GetBool("shaftAttached");
+
+        if (Api?.Side == EnumAppSide.Client && _shaftAttached != oldShaftAttached) {
+            LoadShape();
+        }
 
         (invDialog as GuiDialogMachine)?.UpdateProgress(_progress, _workTime);
         UpdateAnimation(oldProgress);
@@ -182,7 +274,7 @@ public abstract class BEHandCrankedMachine : BlockEntityOpenableContainer {
         }
 
         float time = _workTime > 0 ? _workTime : AnimationFrames / AnimationFps;
-        float speed = _working ? AnimationFrames / AnimationFps / time : 0;
+        float speed = _working ? AnimationFrames / AnimationFps / time * _rate : 0;
 
         if (AnimUtil.activeAnimationsByAnimCode.TryGetValue(AnimationCode, out AnimationMetaData? meta)) {
             meta.AnimationSpeed = speed;
@@ -211,11 +303,17 @@ public abstract class BEHandCrankedMachine : BlockEntityOpenableContainer {
         }
 
         CompositeShape? stageShape = GetBehavior<BEBehaviorRightClickConstructable>()?.shape;
-        if (stageShape == null) {
-            return base.OnTesselation(mesher, tessThreadTesselator);
+        if (IsBuilt || stageShape == null) {
+            if (_shape == null) {
+                return base.OnTesselation(mesher, tessThreadTesselator);
+            }
+            tessThreadTesselator.TesselateShape(Block, _shape, out MeshData builtMesh,
+                new Vec3f(0, Block.Shape.rotateY, 0), null, null);
+            mesher.AddMeshData(builtMesh);
+            return true;
         }
 
-        _shape ??= Shape.TryGet(Api, stageShape.Base.CopyWithPathPrefixAndAppendixOnce("shapes/", ".json"));
+        _shape ??= ReadShape();
         if (_shape == null) {
             return false;
         }
@@ -233,6 +331,15 @@ public abstract class BEHandCrankedMachine : BlockEntityOpenableContainer {
         }
         if (_progress > 0 && _workTime > 0) {
             dsc.AppendLine(Lang.Get(ProgressLangKey, (int)(_progress / _workTime * 100)));
+        }
+
+        if (Block is not BlockHandCrankedMachine { ShaftFace: { } face }) {
+            return;
+        }
+        if (_shaftAttached) {
+            dsc.AppendLine(Lang.Get("revindustry:machine-drive-shaft", Consumer?.TrueSpeed ?? 0));
+        } else {
+            dsc.AppendLine(Lang.Get("revindustry:machine-drive-hand", Lang.Get("revindustry:machine-face-" + face.Code)));
         }
     }
 }

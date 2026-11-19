@@ -12,8 +12,13 @@ public class BEWireDrawing : BEHandCrankedMachine {
     protected override string TitleLangKey => "revindustry:wiredrawing-title";
     protected override string ProgressLangKey => "revindustry:wiredrawing-progress";
 
+    private WireDrawingRecipeSystem RecipeSystem => _recipes ??= Api.ModLoader.GetModSystem<WireDrawingRecipeSystem>();
+
     protected override MachineRecipe? FindRecipe(ItemStack? input) {
-        _recipes ??= Api.ModLoader.GetModSystem<WireDrawingRecipeSystem>();
-        return _recipes.FindFor(input);
+        return RecipeSystem.FindFor(input);
+    }
+
+    protected override bool AcceptsInput(ItemStack? stack) {
+        return RecipeSystem.AcceptsInput(stack);
     }
 }

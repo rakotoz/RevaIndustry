@@ -4195,20 +4195,20 @@
 							},
 							"children": [
 								{
-									"name": "handle1",
+									"name": "crank",
 									"from": [
-										-1.6,
+										0.0,
 										0.0,
 										0.0
 									],
 									"to": [
-										-0.1,
-										1.5,
-										0.6
+										0.0,
+										0.0,
+										0.0
 									],
 									"rotationOrigin": [
-										-3.0,
-										-1.0,
+										0.0,
+										0.0,
 										0.0
 									],
 									"faces": {
@@ -4217,303 +4217,385 @@
 											"uv": [
 												0.0,
 												0.0,
-												16.0,
-												16.0
+												0.0,
+												0.0
 											],
-											"autoUv": false
+											"enabled": false
 										},
 										"east": {
 											"texture": "#iron",
 											"uv": [
 												0.0,
 												0.0,
-												16.0,
-												16.0
+												0.0,
+												0.0
 											],
-											"autoUv": false
+											"enabled": false
 										},
 										"south": {
 											"texture": "#iron",
 											"uv": [
 												0.0,
 												0.0,
-												16.0,
-												16.0
+												0.0,
+												0.0
 											],
-											"autoUv": false
+											"enabled": false
 										},
 										"west": {
 											"texture": "#iron",
 											"uv": [
 												0.0,
 												0.0,
-												16.0,
-												16.0
+												0.0,
+												0.0
 											],
-											"autoUv": false
+											"enabled": false
 										},
 										"up": {
 											"texture": "#iron",
 											"uv": [
 												0.0,
 												0.0,
-												16.0,
-												16.0
+												0.0,
+												0.0
 											],
-											"autoUv": false
+											"enabled": false
 										},
 										"down": {
 											"texture": "#iron",
 											"uv": [
 												0.0,
 												0.0,
-												16.0,
-												16.0
+												0.0,
+												0.0
 											],
-											"autoUv": false
+											"enabled": false
 										}
-									}
-								},
-								{
-									"name": "handle2",
-									"from": [
-										-1.1,
-										0.4,
-										0.6
-									],
-									"to": [
-										-0.4,
-										1.1,
-										2.6
-									],
-									"rotationOrigin": [
-										-3.0,
-										-1.0,
-										1.0
-									],
-									"faces": {
-										"north": {
-											"texture": "#iron",
-											"uv": [
+									},
+									"children": [
+										{
+											"name": "handle1",
+											"from": [
+												-1.6,
 												0.0,
-												0.0,
-												16.0,
-												16.0
+												0.0
 											],
-											"autoUv": false
+											"to": [
+												-0.1,
+												1.5,
+												0.6
+											],
+											"rotationOrigin": [
+												-3.0,
+												-1.0,
+												0.0
+											],
+											"faces": {
+												"north": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"east": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"south": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"west": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"up": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"down": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												}
+											}
 										},
-										"east": {
-											"texture": "#iron",
-											"uv": [
-												0.0,
-												0.0,
-												16.0,
-												16.0
+										{
+											"name": "handle2",
+											"from": [
+												-1.1,
+												0.4,
+												0.6
 											],
-											"autoUv": false
+											"to": [
+												-0.4,
+												1.1,
+												2.6
+											],
+											"rotationOrigin": [
+												-3.0,
+												-1.0,
+												1.0
+											],
+											"faces": {
+												"north": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"east": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"south": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"west": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"up": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"down": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												}
+											}
 										},
-										"south": {
-											"texture": "#iron",
-											"uv": [
-												0.0,
-												0.0,
-												16.0,
-												16.0
+										{
+											"name": "handle3",
+											"from": [
+												1.7,
+												0.4,
+												5.9
 											],
-											"autoUv": false
+											"to": [
+												2.4,
+												1.1,
+												8.9
+											],
+											"rotationOrigin": [
+												-1.0,
+												-1.0,
+												6.0
+											],
+											"rotationY": 90.0,
+											"faces": {
+												"north": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"east": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"south": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"west": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"up": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"down": {
+													"texture": "#iron",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												}
+											}
 										},
-										"west": {
-											"texture": "#iron",
-											"uv": [
-												0.0,
-												0.0,
-												16.0,
-												16.0
+										{
+											"name": "handle4",
+											"from": [
+												1.2,
+												0.2,
+												3.3
 											],
-											"autoUv": false
-										},
-										"up": {
-											"texture": "#iron",
-											"uv": [
-												0.0,
-												0.0,
-												16.0,
-												16.0
+											"to": [
+												2.2,
+												1.2,
+												6.3
 											],
-											"autoUv": false
-										},
-										"down": {
-											"texture": "#iron",
-											"uv": [
-												0.0,
-												0.0,
-												16.0,
-												16.0
+											"rotationOrigin": [
+												-1.0,
+												-1.0,
+												3.0
 											],
-											"autoUv": false
+											"faces": {
+												"north": {
+													"texture": "#surface",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"east": {
+													"texture": "#surface",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"south": {
+													"texture": "#surface",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"west": {
+													"texture": "#surface",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"up": {
+													"texture": "#surface",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												},
+												"down": {
+													"texture": "#surface",
+													"uv": [
+														0.0,
+														0.0,
+														16.0,
+														16.0
+													],
+													"autoUv": false
+												}
+											}
 										}
-									}
-								},
-								{
-									"name": "handle3",
-									"from": [
-										1.7,
-										0.4,
-										5.9
-									],
-									"to": [
-										2.4,
-										1.1,
-										8.9
-									],
-									"rotationOrigin": [
-										-1.0,
-										-1.0,
-										6.0
-									],
-									"rotationY": 90.0,
-									"faces": {
-										"north": {
-											"texture": "#iron",
-											"uv": [
-												0.0,
-												0.0,
-												16.0,
-												16.0
-											],
-											"autoUv": false
-										},
-										"east": {
-											"texture": "#iron",
-											"uv": [
-												0.0,
-												0.0,
-												16.0,
-												16.0
-											],
-											"autoUv": false
-										},
-										"south": {
-											"texture": "#iron",
-											"uv": [
-												0.0,
-												0.0,
-												16.0,
-												16.0
-											],
-											"autoUv": false
-										},
-										"west": {
-											"texture": "#iron",
-											"uv": [
-												0.0,
-												0.0,
-												16.0,
-												16.0
-											],
-											"autoUv": false
-										},
-										"up": {
-											"texture": "#iron",
-											"uv": [
-												0.0,
-												0.0,
-												16.0,
-												16.0
-											],
-											"autoUv": false
-										},
-										"down": {
-											"texture": "#iron",
-											"uv": [
-												0.0,
-												0.0,
-												16.0,
-												16.0
-											],
-											"autoUv": false
-										}
-									}
-								},
-								{
-									"name": "handle4",
-									"from": [
-										1.2,
-										0.2,
-										3.3
-									],
-									"to": [
-										2.2,
-										1.2,
-										6.3
-									],
-									"rotationOrigin": [
-										-1.0,
-										-1.0,
-										3.0
-									],
-									"faces": {
-										"north": {
-											"texture": "#surface",
-											"uv": [
-												0.0,
-												0.0,
-												16.0,
-												16.0
-											],
-											"autoUv": false
-										},
-										"east": {
-											"texture": "#surface",
-											"uv": [
-												0.0,
-												0.0,
-												16.0,
-												16.0
-											],
-											"autoUv": false
-										},
-										"south": {
-											"texture": "#surface",
-											"uv": [
-												0.0,
-												0.0,
-												16.0,
-												16.0
-											],
-											"autoUv": false
-										},
-										"west": {
-											"texture": "#surface",
-											"uv": [
-												0.0,
-												0.0,
-												16.0,
-												16.0
-											],
-											"autoUv": false
-										},
-										"up": {
-											"texture": "#surface",
-											"uv": [
-												0.0,
-												0.0,
-												16.0,
-												16.0
-											],
-											"autoUv": false
-										},
-										"down": {
-											"texture": "#surface",
-											"uv": [
-												0.0,
-												0.0,
-												16.0,
-												16.0
-											],
-											"autoUv": false
-										}
-									}
+									]
 								},
 								{
 									"name": "gear",
@@ -6248,7 +6330,7 @@
 						-3.0
 					],
 					"to": [
-						24.0,
+						22.6,
 						11.0,
 						3.0
 					],
@@ -6908,6 +6990,3621 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "coupling",
+			"from": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"to": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"rotationOrigin": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"faces": {
+				"north": {
+					"texture": "#iron",
+					"uv": [
+						0.0,
+						0.0,
+						0.0,
+						0.0
+					],
+					"enabled": false
+				},
+				"east": {
+					"texture": "#iron",
+					"uv": [
+						0.0,
+						0.0,
+						0.0,
+						0.0
+					],
+					"enabled": false
+				},
+				"south": {
+					"texture": "#iron",
+					"uv": [
+						0.0,
+						0.0,
+						0.0,
+						0.0
+					],
+					"enabled": false
+				},
+				"west": {
+					"texture": "#iron",
+					"uv": [
+						0.0,
+						0.0,
+						0.0,
+						0.0
+					],
+					"enabled": false
+				},
+				"up": {
+					"texture": "#iron",
+					"uv": [
+						0.0,
+						0.0,
+						0.0,
+						0.0
+					],
+					"enabled": false
+				},
+				"down": {
+					"texture": "#iron",
+					"uv": [
+						0.0,
+						0.0,
+						0.0,
+						0.0
+					],
+					"enabled": false
+				}
+			},
+			"children": [
+				{
+					"name": "coupling-wall",
+					"from": [
+						30.6,
+						0.0,
+						6.0
+					],
+					"to": [
+						31.0,
+						16.0,
+						10.0
+					],
+					"rotationOrigin": [
+						30.6,
+						0.0,
+						6.0
+					],
+					"faces": {
+						"north": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.4,
+								16.0
+							]
+						},
+						"south": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.4,
+								16.0
+							]
+						},
+						"east": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								4.0,
+								16.0
+							]
+						},
+						"west": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								4.0,
+								16.0
+							]
+						},
+						"up": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.4,
+								4.0
+							]
+						},
+						"down": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.4,
+								4.0
+							]
+						}
+					}
+				},
+				{
+					"name": "coupling-post",
+					"from": [
+						2.0,
+						11.0,
+						7.4
+					],
+					"to": [
+						2.6,
+						15.0,
+						8.6
+					],
+					"rotationOrigin": [
+						2.0,
+						11.0,
+						7.4
+					],
+					"faces": {
+						"north": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.6,
+								4.0
+							]
+						},
+						"south": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.6,
+								4.0
+							]
+						},
+						"east": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								1.2,
+								4.0
+							]
+						},
+						"west": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								1.2,
+								4.0
+							]
+						},
+						"up": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.6,
+								1.2
+							]
+						},
+						"down": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.6,
+								1.2
+							]
+						}
+					}
+				},
+				{
+					"name": "coupling-gearin",
+					"from": [
+						0.0,
+						0.0,
+						0.0
+					],
+					"to": [
+						0.0,
+						0.0,
+						0.0
+					],
+					"rotationOrigin": [
+						0.0,
+						8.0,
+						8.0
+					],
+					"faces": {
+						"north": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.0,
+								0.0
+							],
+							"enabled": false
+						},
+						"east": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.0,
+								0.0
+							],
+							"enabled": false
+						},
+						"south": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.0,
+								0.0
+							],
+							"enabled": false
+						},
+						"west": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.0,
+								0.0
+							],
+							"enabled": false
+						},
+						"up": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.0,
+								0.0
+							],
+							"enabled": false
+						},
+						"down": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.0,
+								0.0
+							],
+							"enabled": false
+						}
+					},
+					"children": [
+						{
+							"name": "coupling-hub",
+							"from": [
+								30.6,
+								7.25,
+								7.25
+							],
+							"to": [
+								32.0,
+								8.75,
+								8.75
+							],
+							"rotationOrigin": [
+								0.0,
+								8.0,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.4,
+										1.5
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.4,
+										1.5
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.5,
+										1.5
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.5,
+										1.5
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.4,
+										1.5
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.4,
+										1.5
+									]
+								}
+							}
+						},
+						{
+							"name": "coupling-gearin-body1",
+							"from": [
+								31.1,
+								4.9,
+								6.7159
+							],
+							"to": [
+								31.9,
+								11.1,
+								9.2841
+							],
+							"rotationOrigin": [
+								31.5,
+								8.0,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										6.2
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										6.2
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										2.568,
+										6.2
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										2.568,
+										6.2
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										2.568
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										2.568
+									]
+								}
+							}
+						},
+						{
+							"name": "coupling-gearin-body2",
+							"from": [
+								31.1,
+								4.9,
+								6.7159
+							],
+							"to": [
+								31.9,
+								11.1,
+								9.2841
+							],
+							"rotationOrigin": [
+								31.5,
+								8.0,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										6.2
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										6.2
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										2.568,
+										6.2
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										2.568,
+										6.2
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										2.568
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										2.568
+									]
+								}
+							},
+							"rotationX": 45.0
+						},
+						{
+							"name": "coupling-gearin-body3",
+							"from": [
+								31.1,
+								4.9,
+								6.7159
+							],
+							"to": [
+								31.9,
+								11.1,
+								9.2841
+							],
+							"rotationOrigin": [
+								31.5,
+								8.0,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										6.2
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										6.2
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										2.568,
+										6.2
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										2.568,
+										6.2
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										2.568
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										2.568
+									]
+								}
+							},
+							"rotationX": 90.0
+						},
+						{
+							"name": "coupling-gearin-body4",
+							"from": [
+								31.1,
+								4.9,
+								6.7159
+							],
+							"to": [
+								31.9,
+								11.1,
+								9.2841
+							],
+							"rotationOrigin": [
+								31.5,
+								8.0,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										6.2
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										6.2
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										2.568,
+										6.2
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										2.568,
+										6.2
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										2.568
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										2.568
+									]
+								}
+							},
+							"rotationX": 135.0
+						},
+						{
+							"name": "coupling-gearin-tooth1",
+							"from": [
+								31.2,
+								10.8,
+								7.7
+							],
+							"to": [
+								31.8,
+								11.7,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								8.0,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": 18.0
+						},
+						{
+							"name": "coupling-gearin-tooth2",
+							"from": [
+								31.2,
+								10.8,
+								7.7
+							],
+							"to": [
+								31.8,
+								11.7,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								8.0,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": 54.0
+						},
+						{
+							"name": "coupling-gearin-tooth3",
+							"from": [
+								31.2,
+								10.8,
+								7.7
+							],
+							"to": [
+								31.8,
+								11.7,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								8.0,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": 90.0
+						},
+						{
+							"name": "coupling-gearin-tooth4",
+							"from": [
+								31.2,
+								10.8,
+								7.7
+							],
+							"to": [
+								31.8,
+								11.7,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								8.0,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": 126.0
+						},
+						{
+							"name": "coupling-gearin-tooth5",
+							"from": [
+								31.2,
+								10.8,
+								7.7
+							],
+							"to": [
+								31.8,
+								11.7,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								8.0,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": 162.0
+						},
+						{
+							"name": "coupling-gearin-tooth6",
+							"from": [
+								31.2,
+								10.8,
+								7.7
+							],
+							"to": [
+								31.8,
+								11.7,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								8.0,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": -162.0
+						},
+						{
+							"name": "coupling-gearin-tooth7",
+							"from": [
+								31.2,
+								10.8,
+								7.7
+							],
+							"to": [
+								31.8,
+								11.7,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								8.0,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": -126.0
+						},
+						{
+							"name": "coupling-gearin-tooth8",
+							"from": [
+								31.2,
+								10.8,
+								7.7
+							],
+							"to": [
+								31.8,
+								11.7,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								8.0,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": -90.0
+						},
+						{
+							"name": "coupling-gearin-tooth9",
+							"from": [
+								31.2,
+								10.8,
+								7.7
+							],
+							"to": [
+								31.8,
+								11.7,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								8.0,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": -54.0
+						},
+						{
+							"name": "coupling-gearin-tooth10",
+							"from": [
+								31.2,
+								10.8,
+								7.7
+							],
+							"to": [
+								31.8,
+								11.7,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								8.0,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": -18.0
+						}
+					]
+				},
+				{
+					"name": "coupling-screw",
+					"from": [
+						0.0,
+						0.0,
+						0.0
+					],
+					"to": [
+						0.0,
+						0.0,
+						0.0
+					],
+					"rotationOrigin": [
+						0.0,
+						14.2,
+						8.0
+					],
+					"faces": {
+						"north": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.0,
+								0.0
+							],
+							"enabled": false
+						},
+						"east": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.0,
+								0.0
+							],
+							"enabled": false
+						},
+						"south": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.0,
+								0.0
+							],
+							"enabled": false
+						},
+						"west": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.0,
+								0.0
+							],
+							"enabled": false
+						},
+						"up": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.0,
+								0.0
+							],
+							"enabled": false
+						},
+						"down": {
+							"texture": "#iron",
+							"uv": [
+								0.0,
+								0.0,
+								0.0,
+								0.0
+							],
+							"enabled": false
+						}
+					},
+					"children": [
+						{
+							"name": "coupling-rod",
+							"from": [
+								2.6,
+								13.8,
+								7.6
+							],
+							"to": [
+								31.9,
+								14.6,
+								8.4
+							],
+							"rotationOrigin": [
+								0.0,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										29.3,
+										0.8
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										29.3,
+										0.8
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										0.8
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										0.8
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										29.3,
+										0.8
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										29.3,
+										0.8
+									]
+								}
+							}
+						},
+						{
+							"name": "coupling-thread1",
+							"from": [
+								4.0,
+								13.65,
+								7.45
+							],
+							"to": [
+								4.4,
+								14.75,
+								8.55
+							],
+							"rotationOrigin": [
+								4.0,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								}
+							},
+							"rotationX": 45.0
+						},
+						{
+							"name": "coupling-thread2",
+							"from": [
+								6.0,
+								13.65,
+								7.45
+							],
+							"to": [
+								6.4,
+								14.75,
+								8.55
+							],
+							"rotationOrigin": [
+								6.0,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								}
+							},
+							"rotationX": 45.0
+						},
+						{
+							"name": "coupling-thread3",
+							"from": [
+								8.0,
+								13.65,
+								7.45
+							],
+							"to": [
+								8.4,
+								14.75,
+								8.55
+							],
+							"rotationOrigin": [
+								8.0,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								}
+							},
+							"rotationX": 45.0
+						},
+						{
+							"name": "coupling-thread4",
+							"from": [
+								10.0,
+								13.65,
+								7.45
+							],
+							"to": [
+								10.4,
+								14.75,
+								8.55
+							],
+							"rotationOrigin": [
+								10.0,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								}
+							},
+							"rotationX": 45.0
+						},
+						{
+							"name": "coupling-thread5",
+							"from": [
+								12.0,
+								13.65,
+								7.45
+							],
+							"to": [
+								12.4,
+								14.75,
+								8.55
+							],
+							"rotationOrigin": [
+								12.0,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								}
+							},
+							"rotationX": 45.0
+						},
+						{
+							"name": "coupling-thread6",
+							"from": [
+								14.0,
+								13.65,
+								7.45
+							],
+							"to": [
+								14.4,
+								14.75,
+								8.55
+							],
+							"rotationOrigin": [
+								14.0,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								}
+							},
+							"rotationX": 45.0
+						},
+						{
+							"name": "coupling-thread7",
+							"from": [
+								16.0,
+								13.65,
+								7.45
+							],
+							"to": [
+								16.4,
+								14.75,
+								8.55
+							],
+							"rotationOrigin": [
+								16.0,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								}
+							},
+							"rotationX": 45.0
+						},
+						{
+							"name": "coupling-thread8",
+							"from": [
+								18.0,
+								13.65,
+								7.45
+							],
+							"to": [
+								18.4,
+								14.75,
+								8.55
+							],
+							"rotationOrigin": [
+								18.0,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								}
+							},
+							"rotationX": 45.0
+						},
+						{
+							"name": "coupling-thread9",
+							"from": [
+								20.0,
+								13.65,
+								7.45
+							],
+							"to": [
+								20.4,
+								14.75,
+								8.55
+							],
+							"rotationOrigin": [
+								20.0,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								}
+							},
+							"rotationX": 45.0
+						},
+						{
+							"name": "coupling-thread10",
+							"from": [
+								22.0,
+								13.65,
+								7.45
+							],
+							"to": [
+								22.4,
+								14.75,
+								8.55
+							],
+							"rotationOrigin": [
+								22.0,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								}
+							},
+							"rotationX": 45.0
+						},
+						{
+							"name": "coupling-thread11",
+							"from": [
+								24.0,
+								13.65,
+								7.45
+							],
+							"to": [
+								24.4,
+								14.75,
+								8.55
+							],
+							"rotationOrigin": [
+								24.0,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								}
+							},
+							"rotationX": 45.0
+						},
+						{
+							"name": "coupling-thread12",
+							"from": [
+								26.0,
+								13.65,
+								7.45
+							],
+							"to": [
+								26.4,
+								14.75,
+								8.55
+							],
+							"rotationOrigin": [
+								26.0,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								}
+							},
+							"rotationX": 45.0
+						},
+						{
+							"name": "coupling-thread13",
+							"from": [
+								28.0,
+								13.65,
+								7.45
+							],
+							"to": [
+								28.4,
+								14.75,
+								8.55
+							],
+							"rotationOrigin": [
+								28.0,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										1.1,
+										1.1
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.4,
+										1.1
+									]
+								}
+							},
+							"rotationX": 45.0
+						},
+						{
+							"name": "coupling-gearout-body1",
+							"from": [
+								31.1,
+								11.1,
+								6.7159
+							],
+							"to": [
+								31.9,
+								17.3,
+								9.2841
+							],
+							"rotationOrigin": [
+								31.5,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										6.2
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										6.2
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										2.568,
+										6.2
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										2.568,
+										6.2
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										2.568
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										2.568
+									]
+								}
+							}
+						},
+						{
+							"name": "coupling-gearout-body2",
+							"from": [
+								31.1,
+								11.1,
+								6.7159
+							],
+							"to": [
+								31.9,
+								17.3,
+								9.2841
+							],
+							"rotationOrigin": [
+								31.5,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										6.2
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										6.2
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										2.568,
+										6.2
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										2.568,
+										6.2
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										2.568
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										2.568
+									]
+								}
+							},
+							"rotationX": 45.0
+						},
+						{
+							"name": "coupling-gearout-body3",
+							"from": [
+								31.1,
+								11.1,
+								6.7159
+							],
+							"to": [
+								31.9,
+								17.3,
+								9.2841
+							],
+							"rotationOrigin": [
+								31.5,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										6.2
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										6.2
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										2.568,
+										6.2
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										2.568,
+										6.2
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										2.568
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										2.568
+									]
+								}
+							},
+							"rotationX": 90.0
+						},
+						{
+							"name": "coupling-gearout-body4",
+							"from": [
+								31.1,
+								11.1,
+								6.7159
+							],
+							"to": [
+								31.9,
+								17.3,
+								9.2841
+							],
+							"rotationOrigin": [
+								31.5,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										6.2
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										6.2
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										2.568,
+										6.2
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										2.568,
+										6.2
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										2.568
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.8,
+										2.568
+									]
+								}
+							},
+							"rotationX": 135.0
+						},
+						{
+							"name": "coupling-gearout-tooth1",
+							"from": [
+								31.2,
+								17.0,
+								7.7
+							],
+							"to": [
+								31.8,
+								17.9,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": 18.0
+						},
+						{
+							"name": "coupling-gearout-tooth2",
+							"from": [
+								31.2,
+								17.0,
+								7.7
+							],
+							"to": [
+								31.8,
+								17.9,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": 54.0
+						},
+						{
+							"name": "coupling-gearout-tooth3",
+							"from": [
+								31.2,
+								17.0,
+								7.7
+							],
+							"to": [
+								31.8,
+								17.9,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": 90.0
+						},
+						{
+							"name": "coupling-gearout-tooth4",
+							"from": [
+								31.2,
+								17.0,
+								7.7
+							],
+							"to": [
+								31.8,
+								17.9,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": 126.0
+						},
+						{
+							"name": "coupling-gearout-tooth5",
+							"from": [
+								31.2,
+								17.0,
+								7.7
+							],
+							"to": [
+								31.8,
+								17.9,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": 162.0
+						},
+						{
+							"name": "coupling-gearout-tooth6",
+							"from": [
+								31.2,
+								17.0,
+								7.7
+							],
+							"to": [
+								31.8,
+								17.9,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": -162.0
+						},
+						{
+							"name": "coupling-gearout-tooth7",
+							"from": [
+								31.2,
+								17.0,
+								7.7
+							],
+							"to": [
+								31.8,
+								17.9,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": -126.0
+						},
+						{
+							"name": "coupling-gearout-tooth8",
+							"from": [
+								31.2,
+								17.0,
+								7.7
+							],
+							"to": [
+								31.8,
+								17.9,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": -90.0
+						},
+						{
+							"name": "coupling-gearout-tooth9",
+							"from": [
+								31.2,
+								17.0,
+								7.7
+							],
+							"to": [
+								31.8,
+								17.9,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": -54.0
+						},
+						{
+							"name": "coupling-gearout-tooth10",
+							"from": [
+								31.2,
+								17.0,
+								7.7
+							],
+							"to": [
+								31.8,
+								17.9,
+								8.3
+							],
+							"rotationOrigin": [
+								31.5,
+								14.2,
+								8.0
+							],
+							"faces": {
+								"north": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"south": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"east": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"west": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.9
+									]
+								},
+								"up": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								},
+								"down": {
+									"texture": "#iron",
+									"uv": [
+										0.0,
+										0.0,
+										0.6,
+										0.6
+									]
+								}
+							},
+							"rotationX": -18.0
+						}
+					]
+				}
+			]
 		}
 	],
 	"animations": [
@@ -6933,6 +10630,16 @@
 							"rotationX": 0.0,
 							"rotationY": 0.0,
 							"rotationZ": 0.0
+						},
+						"coupling-screw": {
+							"rotationX": -0.0,
+							"rotationY": 0.0,
+							"rotationZ": 0.0
+						},
+						"coupling-gearin": {
+							"rotationX": 0.0,
+							"rotationY": 0.0,
+							"rotationZ": 0.0
 						}
 					}
 				},
@@ -6951,6 +10658,16 @@
 							"rotationX": 0.0,
 							"rotationY": 0.0,
 							"rotationZ": 360.0
+						},
+						"coupling-screw": {
+							"rotationX": -2520.0,
+							"rotationY": 0.0,
+							"rotationZ": 0.0
+						},
+						"coupling-gearin": {
+							"rotationX": 2520.0,
+							"rotationY": 0.0,
+							"rotationZ": 0.0
 						}
 					}
 				}
