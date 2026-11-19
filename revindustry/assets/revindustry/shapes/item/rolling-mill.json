@@ -8,11 +8,11 @@
 	"textureHeight": 16,
 	"textureSizes": {},
 	"textures": {
-		"iron": "/downloads/Vintage Story/assets/survival/textures/block/metal/anvil/iron",
-		"steel": "/downloads/Vintage Story/assets/survival/textures/block/metal/anvil/steel",
-		"tinbronze": "/downloads/Vintage Story/assets/survival/textures/block/metal/anvil/tinbronze",
-		"oak": "/downloads/Vintage Story/assets/survival/textures/block/wood/oak",
-		"oak-dark": "/downloads/Vintage Story/assets/survival/textures/block/wood/oak-dark"
+		"iron": "game:block/metal/anvil/iron",
+		"steel": "game:block/metal/anvil/steel",
+		"tinbronze": "game:block/metal/anvil/tinbronze",
+		"oak": "game:block/wood/oak",
+		"oak-dark": "game:block/wood/oak-dark"
 	},
 	"elements": [
 		{
@@ -1287,7 +1287,7 @@
 								}
 							}
 						}
-					]
+					],
 				},
 				{
 					"name": "rollBottom",
@@ -7878,6 +7878,57 @@
 							}
 						}
 					]
+				}
+			]
+		}
+	],
+	"animations": [
+		{
+			"name": "Animation 1",
+			"code": "roll",
+			"quantityframes": 180,
+			"onActivityStopped": "EaseOut",
+			"onAnimationEnd": "Hold",
+			"keyframes": [
+				{
+					"frame": 0,
+					"elements": {
+						"rollBottom": {
+							"rotationX": 0.0,
+							"rotationY": 0.0,
+							"rotationZ": 0.0
+						},
+						"rollTop": {
+							"rotationX": 0.0,
+							"rotationY": 0.0,
+							"rotationZ": 0.0
+						},
+						"crank": {
+							"rotationX": 0.0,
+							"rotationY": 0.0,
+							"rotationZ": 0.0
+						}
+					}
+				},
+				{
+					"frame": 179,
+					"elements": {
+						"rollBottom": {
+							"rotationX": 360.0,
+							"rotationY": 0.0,
+							"rotationZ": 0.0
+						},
+						"rollTop": {
+							"rotationX": -360.0,
+							"rotationY": 0.0,
+							"rotationZ": 0.0
+						},
+						"crank": {
+							"rotationX": 360.0,
+							"rotationY": 0.0,
+							"rotationZ": 0.0
+						}
+					}
 				}
 			]
 		}

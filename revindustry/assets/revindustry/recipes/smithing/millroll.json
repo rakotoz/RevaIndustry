@@ -1,0 +1,15 @@
+{
+	"code": "revindustry-millroll",
+	"ingredient": { "type": "item", "code": "game:ingot-*", "name": "metal", "allowedVariants": ["steel"] },
+	"pattern": [[
+		"_#####_",
+		"#######",
+		"_#####_"
+	], [
+		"_#####_",
+		"#######",
+		"_#####_"
+	]],
+	"name": "millroll",
+	"output": { "type": "item", "code": "revindustry:millroll-{metal}" }
+}

@@ -17,6 +17,7 @@ public class BERollingMill : BEHandCrankedMachine {
 
     public override string InventoryClassName => "revrollingmill";
     protected override string AnimationCode => "roll";
+    protected override int AnimationFrames => 180;
     protected override string TitleLangKey => "revindustry:rollingmill-title";
     protected override string ProgressLangKey => "revindustry:rollingmill-progress";
 

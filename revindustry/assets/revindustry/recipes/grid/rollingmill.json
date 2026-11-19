@@ -1,0 +1,13 @@
+[
+	{
+		"ingredientPattern": "PPP,SNS",
+		"ingredients": {
+			"P": { "type": "item", "code": "game:plank-*", "quantity": 1 },
+			"S": { "type": "item", "code": "game:stick", "quantity": 1 },
+			"N": { "type": "item", "code": "game:metalnailsandstrips-iron", "quantity": 1 }
+		},
+		"width": 3,
+		"height": 2,
+		"output": { "type": "block", "code": "revindustry:rollingmill-north" }
+	}
+]

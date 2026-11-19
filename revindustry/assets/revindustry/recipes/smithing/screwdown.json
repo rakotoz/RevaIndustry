@@ -1,0 +1,15 @@
+{
+	"code": "revindustry-screwdown",
+	"ingredient": { "type": "item", "code": "game:ingot-*", "name": "metal", "allowedVariants": ["tinbronze"] },
+	"pattern": [[
+		"#_#_#_#_#",
+		"#########",
+		"#_#_#_#_#"
+	], [
+		"____#____",
+		"____#____",
+		"____#____"
+	]],
+	"name": "screwdown",
+	"output": { "type": "item", "code": "revindustry:screwdown-{metal}" }
+}

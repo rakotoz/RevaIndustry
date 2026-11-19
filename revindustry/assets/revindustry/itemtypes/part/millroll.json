@@ -1,0 +1,41 @@
+{
+	"code": "millroll",
+	"variantgroups": [
+		{ "code": "metal", "states": ["steel"] }
+	],
+	"shape": {
+		"base": "item/rolling-mill",
+		"selectiveElements": ["mill/rollBottom/*"]
+	},
+	"textures": {
+		"steel": { "base": "game:block/metal/anvil/{metal}" },
+		"tinbronze": { "base": "game:block/metal/anvil/tinbronze" }
+	},
+	"creativeinventory": { "general": ["*"], "items": ["*"] },
+	"maxstacksize": 4,
+	"materialDensity": 7850,
+	"attributes": {
+		"shelvable": true,
+		"onshelfTransform": {
+			"translation": { "x": 0, "y": -0.4, "z": 0.2 },
+			"rotation": { "x": 0, "y": -90, "z": 0 }
+		}
+	},
+	"guiTransform": {
+		"rotation": { "x": -30, "y": -45, "z": 0 },
+		"origin": { "x": 0.56, "y": 0.55, "z": 0.5 },
+		"scale": 2.4
+	},
+	"groundTransform": {
+		"translation": { "x": 0, "y": 0, "z": 0.3 },
+		"rotation": { "x": 90, "y": 0, "z": 0 },
+		"origin": { "x": 0.56, "y": 0.47, "z": 0.5 },
+		"scale": 3
+	},
+	"tpHandTransform": {
+		"translation": { "x": -0.9, "y": -0.8, "z": -0.62 },
+		"rotation": { "x": 0, "y": 0, "z": 18 },
+		"origin": { "x": 0.56, "y": 0.55, "z": 0.5 },
+		"scale": 0.8
+	}
+}
