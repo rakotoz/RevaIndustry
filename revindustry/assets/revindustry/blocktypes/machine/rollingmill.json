@@ -1,0 +1,211 @@
+{
+	"class": "RevHandCrankedMachine",
+	"entityClass": "RevRollingMill",
+	"entityBehaviors": [
+		{
+			"name": "Animatable"
+		},
+		{
+			"name": "RightClickConstructable",
+			"properties": {
+				"brokenDropsRatio": 0.8,
+				"stages": [
+					{
+						"addElements": [
+							"stanina"
+						]
+					},
+					{
+						"requireStacks": [
+							{
+								"type": "item",
+								"code": "game:metalplate-iron",
+								"quantity": 2
+							}
+						],
+						"addElements": [
+							"mill/base"
+						]
+					},
+					{
+						"requireStacks": [
+							{
+								"type": "item",
+								"code": "revindustry:millroll-steel",
+								"quantity": 2
+							}
+						],
+						"addElements": [
+							"mill/rollBottom",
+							"mill/rollTop"
+						]
+					},
+					{
+						"requireStacks": [
+							{
+								"type": "item",
+								"code": "revindustry:screwdown-tinbronze",
+								"quantity": 1
+							}
+						],
+						"addElements": [
+							"mill/top"
+						]
+					},
+					{
+						"requireStacks": [
+							{
+								"type": "item",
+								"code": "game:rod-iron",
+								"quantity": 1
+							}
+						],
+						"addElements": [
+							"mill/crank"
+						]
+					}
+				]
+			}
+		}
+	],
+	"code": "rollingmill",
+	"variantgroups": [
+		{
+			"code": "side",
+			"loadFromProperties": "abstract/horizontalorientation"
+		}
+	],
+	"behaviors": [
+		{
+			"name": "HorizontalOrientable"
+		},
+		{
+			"name": "BlockEntityInteract"
+		}
+	],
+	"shapeByType": {
+		"*-north": {
+			"base": "item/rolling-mill",
+			"rotateY": 0
+		},
+		"*-east": {
+			"base": "item/rolling-mill",
+			"rotateY": 270
+		},
+		"*-south": {
+			"base": "item/rolling-mill",
+			"rotateY": 180
+		},
+		"*-west": {
+			"base": "item/rolling-mill",
+			"rotateY": 90
+		}
+	},
+	"textures": {
+		"iron": {
+			"base": "game:block/metal/anvil/iron"
+		},
+		"steel": {
+			"base": "game:block/metal/anvil/steel"
+		},
+		"tinbronze": {
+			"base": "game:block/metal/anvil/tinbronze"
+		},
+		"oak": {
+			"base": "game:block/wood/oak"
+		},
+		"oak-dark": {
+			"base": "game:block/wood/oak-dark"
+		}
+	},
+	"groundTransform": {
+		"translation": { "x": -0.5, "y": 0, "z": 0.2 },
+		"origin": { "x": 0.5, "y": 0, "z": 0.5 },
+		"scale": 1.5
+	},
+	"creativeinventory": {
+		"general": [
+			"rollingmill-north"
+		]
+	},
+	"drops": [
+		{
+			"type": "block",
+			"code": "rollingmill-north"
+		}
+	],
+	"blockmaterial": "Metal",
+	"resistance": 4,
+	"materialDensity": 7000,
+	"lightAbsorption": 0,
+	"sideAo": {
+		"all": false
+	},
+	"sidesolid": {
+		"all": false
+	},
+	"sideopaque": {
+		"all": false
+	},
+	"selectionBoxes": [
+		{
+			"x1": 0.25,
+			"y1": 0,
+			"z1": 0.125,
+			"x2": 0.81,
+			"y2": 1.0,
+			"z2": 0.875,
+			"rotateYByType": {
+				"*-east": 270,
+				"*-south": 180,
+				"*-west": 90
+			}
+		},
+		{
+			"x1": 0,
+			"y1": 0.25,
+			"z1": 0.25,
+			"x2": 0.25,
+			"y2": 0.82,
+			"z2": 0.82,
+			"rotateYByType": {
+				"*-east": 270,
+				"*-south": 180,
+				"*-west": 90
+			}
+		}
+	],
+	"collisionBox": {
+		"x1": 0.19,
+		"y1": 0,
+		"z1": 0.125,
+		"x2": 0.81,
+		"y2": 0.9,
+		"z2": 0.875,
+		"rotateYByType": {
+			"*-east": 270,
+			"*-south": 180,
+			"*-west": 90
+		}
+	},
+	"sounds": {
+		"place": "game:block/anvil",
+		"break": "game:block/anvil",
+		"hit": "game:block/anvil",
+		"walk": "game:walk/stone"
+	},
+	"attributes": {
+		"handbook": {
+			"extraSections": [
+				{
+					"title": "revindustry:rollingmill-handbook-build-title",
+					"text": "revindustry:rollingmill-handbook-build-text"
+				},
+				{
+					"title": "revindustry:rollingmill-handbook-use-title",
+					"text": "revindustry:rollingmill-handbook-use-text"
+				}
+			]
+		}
+	}
+}

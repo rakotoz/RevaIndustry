@@ -1,4 +1,5 @@
 {
+	"code": "revindustry-gearrack",
 	"ingredient": { "type": "item", "code": "game:ingot-*", "name": "metal", "allowedVariants": ["iron"] },
 	"pattern": [[
 		"##############",

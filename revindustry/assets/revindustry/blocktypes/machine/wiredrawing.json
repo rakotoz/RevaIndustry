@@ -1,10 +1,18 @@
 {
-	"class": "RevWireDrawing",
+	"class": "RevHandCrankedMachine",
 	"entityClass": "RevWireDrawing",
 	"code": "wiredrawing",
 	"guiTransform": {
-		"rotation": { "x": -22.6, "y": -45.3, "z": 0 },
-		"origin": { "x": 1.0, "y": 0.45, "z": 0.5 },
+		"rotation": {
+			"x": -22.6,
+			"y": -45.3,
+			"z": 0
+		},
+		"origin": {
+			"x": 1.0,
+			"y": 0.45,
+			"z": 0.5
+		},
 		"scale": 0.8
 	},
 	"behaviors": [
@@ -56,7 +64,9 @@
 				}
 			}
 		},
-		{ "name": "BlockEntityInteract" }
+		{
+			"name": "BlockEntityInteract"
+		}
 	],
 	"entityBehaviors": [
 		{
@@ -246,5 +256,19 @@
 			"type": "block",
 			"code": "wiredrawing-north"
 		}
-	]
+	],
+	"attributes": {
+		"handbook": {
+			"extraSections": [
+				{
+					"title": "revindustry:wiredrawing-handbook-build-title",
+					"text": "revindustry:wiredrawing-handbook-build-text"
+				},
+				{
+					"title": "revindustry:wiredrawing-handbook-use-title",
+					"text": "revindustry:wiredrawing-handbook-use-text"
+				}
+			]
+		}
+	}
 }
